@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: url("https://www.mellowmountain.at/media/maxSize/20795063_10155561855522071_787046359_o.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.img {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.container {
+  position: relative;
+  width: 390px;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(30px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  padding: 20px;
+  color: #fff;
+  transition: height 0.6s ease;
+}
+.search-box {
+  position: relative;
+  width: 100%;
+  height: 55px;
+  /* background-color: yellowgreen; */
+  display: flex;
+  align-items: center;
+}
+.search-box input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  outline: none;
+  border-radius: 10px;
+  font-size: 22px;
+  color: white;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 0 48px 0 42px;
+}
+.search-box input::placeholder {
+  color: #fff;
+  text-transform: capitalize;
+}
+.search-box button {
+  position: absolute;
+  right: 0;
+  width: 40px;
+  height: 100%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 28px;
+  color: #fff;
+  padding: 0 40px 0 5px;
+  cursor: pointer;
+}
+.search-box i {
+  position: absolute;
+  left: 10px;
+  font-size: 28px;
+}
+.weahter-box {
+  text-align: center;
+  margin: 40px 0;
+}
+.weahter-box,
+.weahter-details,
+.not-found {
+  visibility: hidden;
+}
+.weahter-box.active,
+.weahter-details.active,
+.not-found.active {
+  visibility: visible;
+}
+
+.weahter-box img {
+  width: 60%;
+}
+.temperature {
+  position: relative;
+  font-size: 64px;
+  line-height: 1;
+  font-weight: 700;
+  margin: 0px 0 6px -30px;
+}
+.temperature span {
+  position: absolute;
+  font-size: 24px;
+  margin-left: 4px;
+}
+.description {
+  font-size: 22px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.weahter-details {
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  width: 100%;
+  padding: 0 20px;
+  display: flex;
+}
+.humidity,
+.wind {
+  display: flex;
+  align-items: center;
+  width: 50%;
+}
+.humidity {
+  padding-left: 20px;
+  justify-content: flex-start;
+}
+.wind {
+  padding-right: 20px;
+  justify-content: flex-end;
+}
+.weahter-details i {
+  font-size: 56px;
+  margin-right: 10px;
+}
+.weahter-details span {
+  display: inline-block;
+  font-size: 22px;
+  font-weight: 500;
+}
+.weahter-details p {
+  font-size: 14px;
+  font-weight: 500;
+}
+.not-found {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  margin-top: 110px;
+}
+.not-found img {
+  width: 65%;
+}
+.not-found p {
+  font-size: 22px;
+  font-weight: 500;
+}
